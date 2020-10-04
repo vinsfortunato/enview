@@ -12,7 +12,7 @@ buildscript {
 allprojects {
     apply plugin: 'eclipse'
     apply plugin: 'idea'
-    apply plugin: 'java'
+
 
     repositories {
         mavenLocal()
@@ -30,16 +30,20 @@ ext {
 }
 
 project(":enview") {
+    apply plugin: 'java-library'
+
     dependencies {
-        compile "com.badlogicgames.gdx:gdx:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx:$gdxVersion"
     }
 }
 
 project(":tests") {
+    apply plugin: 'java-library'
+
     dependencies {
-        compile project(":enview")
-        compile "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
-        compile "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        api project(":enview")
+        api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
     }
 }
 
