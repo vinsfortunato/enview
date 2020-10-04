@@ -1,4 +1,5 @@
 # enview
+[![Build Status](https://travis-ci.com/vinsfortunato/enview.svg?branch=master)](https://travis-ci.com/vinsfortunato/enview) 
 [![License](https://img.shields.io/badge/license-MIT-green)](https://opensource.org/licenses/MIT)
 
 An extension of libGDX that allows creating Scene2D UIs using XML and Groovy as scripting language. 
